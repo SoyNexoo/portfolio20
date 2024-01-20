@@ -5,22 +5,20 @@ export const ContactUs = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        process.env.VITE_SERVICE_ID,
-        process.env.VITE_TEMPLATE_ID,
-        form.current,
-        process.env.VITE_PUBLIC_ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    const serviceId =
+      process.env.REACT_APP_SERVICE_ID || import.meta.env.VITE_SERVICE_ID;
+    const templateId =
+      process.env.REACT_APP_TEMPLATE_ID || import.meta.env.VITE_TEMPLATE_ID;
+    const publicId =
+      process.env.REACT_APP_PUBLIC_ID || import.meta.env.VITE_PUBLIC_ID;
+    emailjs.sendForm(serviceId, templateId, form.current, publicId).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
   return { form, sendEmail };
 };
