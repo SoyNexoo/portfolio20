@@ -31,7 +31,10 @@ const Contact = () => {
           name="message"
           className="border-b-2 p-4 rounded-b-2xl resize-none h-[200px] bg-darkCyan placeholder:text-gray "
           placeholder={`${content.contact[language].message}`}></textarea>
-        <button type="submit" value={"send"} className="px-5 py-2 border-2">
+        <button
+          type="submit"
+          value={"send"}
+          className="px-5 py-2 border-2 hover:bg-white transition-colors hover:text-cyan">
           {content.contact[language].submit}
         </button>
       </form>
