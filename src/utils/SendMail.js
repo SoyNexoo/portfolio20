@@ -8,9 +8,12 @@ export const ContactUs = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const serviceId = import.meta.env.VITE_SERVICE_ID;
-    const templateId = import.meta.env.VITE_TEMPLATE_ID;
-    const publicId = import.meta.env.VITE_PUBLIC_ID;
+    const serviceId =
+      process.env.REACT_APP_SERVICE_ID || import.meta.env.VITE_SERVICE_ID;
+    const templateId =
+      process.env.REACT_APP_TEMPLATE_ID || import.meta.env.VITE_TEMPLATE_ID;
+    const publicId =
+      process.env.REACT_APP_PUBLIC_ID || import.meta.env.VITE_PUBLIC_ID;
     emailjs.sendForm(serviceId, templateId, form.current, publicId).then(
       (result) => {
         toast.success(`${content.contact[language].success}`);
