@@ -1,6 +1,7 @@
 import { ContactUs } from "../../utils/SendMail";
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
+import { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const { form, sendEmail } = ContactUs();
@@ -10,6 +11,9 @@ const Contact = () => {
     <div
       className="h-screen bg-cyan flex text-white flex-col justify-center text-center gap-20 items-center sm:px-4 p-10 pb-[80px]"
       id="contact">
+      <div>
+        <Toaster position="bottom-right" />
+      </div>
       <h1 className="text-7xl smMd:text-6xl font-bold">
         {content.contact[language].title}{" "}
       </h1>
@@ -37,6 +41,10 @@ const Contact = () => {
           className="px-5 py-2 border-2 hover:bg-white transition-colors hover:text-cyan">
           {content.contact[language].submit}
         </button>
+        <p>
+          {content.contact[language].warning}
+          <span className="text-darkCyan">*</span>
+        </p>
       </form>
     </div>
   );
