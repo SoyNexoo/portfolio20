@@ -25,14 +25,17 @@ const Contact = () => {
           type="text"
           name="user_name"
           className="border-b-2 p-4 rounded-b-2xl  bg-darkCyan placeholder:text-gray "
+          required
           placeholder={`${content.contact[language].name}`}></input>
         <input
           type="email"
           name="user_mail"
           className="border-b-2 p-4 rounded-b-2xl  bg-darkCyan placeholder:text-gray "
+          required
           placeholder="Email"></input>
         <textarea
           name="message"
+          required
           className="border-b-2 p-4 rounded-b-2xl resize-none h-[200px] bg-darkCyan placeholder:text-gray "
           placeholder={`${content.contact[language].message}`}></textarea>
         <button
