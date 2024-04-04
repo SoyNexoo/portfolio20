@@ -6,7 +6,7 @@ const contentAboutMe = {
     warning:
       "If the email link doesn't work, here is my email: Julianlu29.03@gmail.com",
     resume: "Download my Resume",
-    resumePath: "../../utils/Frontend Developer Jr - Julian Luque.pdf",
+    resumePath: "https://drive.google.com/file/d/1urxm9uc0kZI8hw3KTlrgbS0K9qjoFKmf/view?usp=sharing",
   },
   es: {
     title: "QUIEN SOY",
@@ -15,7 +15,7 @@ const contentAboutMe = {
     warning:
       "Si el link de correo no funciona, aquí está mi correo electrónico: Julianlu29.03@gmail.com",
     resume: "Descarga mi CV",
-    resumePath: "../../utils/Desarrollador Frontend Jr - Julian Luque.pdf",
+    resumePath: "https://drive.google.com/file/d/1urxm9uc0kZI8hw3KTlrgbS0K9qjoFKmf/view?usp=sharing",
   },
 };
 
