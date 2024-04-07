@@ -11,7 +11,7 @@ import { LanguageProvider } from "./context/LanguageContext.jsx";
 function App() {
   return (
     <LanguageProvider>
-      <div className="w-full">
+      <div className="w-full ">
         <Navbar />
         <Home></Home>
         <AboutMe></AboutMe>
