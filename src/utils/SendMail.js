@@ -6,8 +6,14 @@ export const ContactUs = () => {
   const { language, content } = useContext(LanguageContext);
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e, setErrors, errors, validateField, formulario) => {
     e.preventDefault();
+
+    const err = validateField(formulario);
+    if (err != {}) {
+      return setErrors(err);
+    }
+
     const serviceId =
       process.env.REACT_APP_SERVICE_ID || import.meta.env.VITE_SERVICE_ID;
     const templateId =

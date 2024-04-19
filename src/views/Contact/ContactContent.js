@@ -8,6 +8,21 @@ const contentContact = {
     warning: "Por favor, no spamees",
     success: "Gracias por tu mensaje!",
     failure: "Lo siento, tu mensaje no se pudo enviar",
+    error: {
+      user_name: {
+        invalid: "Introduzca un nombre.",
+        short: "Nombre muy corto.",
+        large: "Nombre demasiado largo.",
+      },
+      user_mail: {
+        invalid: "Introduzca un correo.",
+      },
+      message: {
+        invalid: "Introduzca un mensaje.",
+        short: "Mensaje muy corto.",
+        large: "Mensaje demasiado largo.",
+      },
+    },
   },
   en: {
     title: "LET'S GET IN TOUCH",
@@ -17,8 +32,23 @@ const contentContact = {
     submit: "Send!",
     success: "Thank you for your message!",
     warning: "Please don't spam.",
-
     failure: "Sorry, your message could not be sent.",
+    error: {
+      name: {
+        invalid: "Enter a name.",
+        short: "Name too short.",
+        large: "Name too long.",
+      },
+      email: {
+        short: "Enter an email.",
+        invalid: "Enter a valid email.",
+      },
+      message: {
+        invalid: "Enter a message.",
+        short: "Message too short.",
+        large: "Message too long.",
+      },
+    },
   },
 };
 
