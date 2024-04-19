@@ -10,7 +10,7 @@ export const ContactUs = () => {
     e.preventDefault();
 
     const err = validateField(formulario);
-    if (err != {}) {
+    if (err) {
       return setErrors(err);
     }
 
