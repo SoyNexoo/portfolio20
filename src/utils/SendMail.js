@@ -11,6 +11,7 @@ export const ContactUs = () => {
 
     const err = validateField(formulario);
     if (err) {
+      console.log(err);
       return setErrors(err);
     }
 

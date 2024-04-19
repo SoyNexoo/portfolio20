@@ -15,24 +15,36 @@ const Contact = () => {
 
   const validateField = (form) => {
     const error = {};
-    const emailRegex = new RegExp('^(.+)@(\\S+)$');
-    if (!form.user_name.trim())
+    let isError = false
+    const emailRegex = new RegExp("^(.+)@(\\S+)$");
+    if (!form.user_name.trim()) {
       error.user_name = content.contact[language].error.user_name.invalid;
-    else if (form.user_name.length < 3)
+      isError = true
+    } else if (form.user_name.length < 3) {
       error.user_name = content.contact[language].error.user_name.short;
-    else if (form.user_name.length > 20)
+      isError = true
+    } else if (form.user_name.length > 20) {
       error.user_name = content.contact[language].error.user_name.large;
-    if (!emailRegex.test(form.user_mail))
+      isError = true
+    }
+    if (!emailRegex.test(form.user_mail)) {
       error.user_mail = content.contact[language].error.user_mail.invalid;
-    if (!form.message.trim()) error.message = content.contact[language].error.message.invalid;
-    else if (form.message.length < 10) error.message = content.contact[language].error.message.short;
-    else if (form.message.length > 200)
+      isError = true
+    }
+    if (!form.message.trim()) {
+      error.message = content.contact[language].error.message.invalid;
+      isError = true
+    } else if (form.message.length < 10) {
+      error.message = content.contact[language].error.message.short;
+      isError = true
+    } else if (form.message.length > 200) {
       error.message = content.contact[language].error.message.large;
-    return error;
+      isError = true
+    }
+    return isError ? error : null ;
   };
 
   const onChange = (e) => {
-    console.log(formulario)
     const { name, value } = e.target;
     setFormulario((prevData) => ({ ...prevData, [name]: value }));
   };
