@@ -24,10 +24,10 @@ const Contact = () => {
       error.user_name = content.contact[language].error.user_name.large;
     if (!emailRegex.test(form.user_mail))
       error.user_mail = content.contact[language].error.user_mail.invalid;
-    if (!form.message.trim()) error.message = "Introduzca un mensaje.";
-    else if (form.message.length < 10) error.message = "Mensaje muy corto.";
+    if (!form.message.trim()) error.message = content.contact[language].error.message.invalid;
+    else if (form.message.length < 10) error.message = content.contact[language].error.message.short;
     else if (form.message.length > 200)
-      error.message = "Mensaje demasiado largo.";
+      error.message = content.contact[language].error.message.large;
     return error;
   };
 

@@ -34,14 +34,13 @@ const contentContact = {
     warning: "Please don't spam.",
     failure: "Sorry, your message could not be sent.",
     error: {
-      name: {
+      user_name: {
         invalid: "Enter a name.",
         short: "Name too short.",
         large: "Name too long.",
       },
-      email: {
-        short: "Enter an email.",
-        invalid: "Enter a valid email.",
+      user_mail: {
+        invalid: "Enter an email.",
       },
       message: {
         invalid: "Enter a message.",
