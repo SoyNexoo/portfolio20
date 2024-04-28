@@ -163,8 +163,8 @@ const Skills = () => {
           <Appear props={list.frontend}></Appear>
         </div>
       </div>
-      <div className="flex flex-col gap-5   w-full items-start">
-        <div className="flex gap-4   items-center sm:items-end   text-darkCyan">
+      <div className="flex flex-col gap-5 w-full items-start">
+        <div className="flex gap-4 items-center sm:items-end   text-darkCyan">
           <FaCog size={50}></FaCog>
           <span className="text-5xl font-bold">Backend</span>
         </div>

@@ -14,7 +14,7 @@ const AboutMe = () => {
   const list = [
     {
       icon: <FaLinkedinIn size={40}></FaLinkedinIn>,
-      path: "https://www.linkedin.com/in/julian-luque-2ba0281a6/",
+      path: "https://www.linkedin.com/in/julianlu05/",
     },
     {
       icon: <FaGithub size={40}></FaGithub>,
