@@ -18,7 +18,7 @@ const Project = ({ image, title, description, list }) => {
             ))}
           </ul>
           <p className=" w-full leading-relaxed text-ellipsis line-clamp-4 text-black">
-            {description}
+            {description} 
           </p>
         </div>
 
